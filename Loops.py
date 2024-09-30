@@ -55,19 +55,79 @@ for n,s in users.items():
     print("Key:  {} \tvalue: {}".format(n,s))
 
 
+# While loop
+x = 0
+
+while x < 10:
+    print("{}  is smaller than 10 ".format(x))
+    x +=1
+else:
+    print("{}  is not  smaller than 10 ".format(x))
 
 
+# factorial
+number = 5
+answer = 1
+
+while number > 0:
+    answer = answer * number
+    number -= 1
+
+print(answer)
+
+# Range
+
+list(range(10))
+
+[*range(10)]
+
+[*range(2,7)]
+
+[*range(2,8,2)]
+
+for number in range(5):
+    print(number)
 
 
+# Enumerate
 
+names = ["Jack William","Nick Cage","Andrew Blake","Bob Marly","Alica Clark","Kate Snow","Sonya Zack"]
+for name in enumerate(names):
+    print(name)
 
+for index, name in enumerate(names):
+    print(index,name)
 
+# Zip
 
+names = ["Jack ","Nick ","Andrew ","Bob ","Alica ","Kate ","Sonya "]
+lastName =["William","Cage","Blake","Marly","Clark","Snow","Zack"]
 
+for name in zip (names,lastName):
+    print(name)
 
+# break
 
+names = ["Jack William","Nick Cage","Andrew Blake","Bob Marly","Alica Clark","Kate Snow","Sonya Zack"]*5
+for index,name in enumerate(names):
+    if name == "Bob Marly":
+        print(index)
+        break
 
+# continue
 
+for number in range(1,12):
+    if number%2==0:
+        continue
+    print(number)
+
+# pass
+
+for number in range(1,12):
+    if number%2==0:
+        pass
+    else:
+        print(number)
 
 
 
