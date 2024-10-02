@@ -43,11 +43,57 @@ def print_name(**kwargs):
 print_name(name="arya")
 
 
+# map, filter and lambda expressions
+
+def number_square(x):
+    return x**2
+print(number_square(5))
+
+numbers = [*range(1,8)]
+print(numbers)
+
+for index in range(len(numbers)):
+    numbers[index]=number_square(numbers[index])
+
+print(numbers)
+
+[*map(number_square,numbers)]
+
+def even_number_filter(x):
+    #if x%2==0:
+    #    return x
+    return x if x%2==0 else None
+
+numbers = [*range(1,6)]
+print([*filter(even_number_filter,numbers)])
+
+list(map(lambda number: number**2, numbers))
+
+[*filter(lambda x: x if x%2==0 else None,numbers)]
 
 
+# input
 
+input("enter a number : ")
 
+inn = input("enter a number : ")
+type(int(inn))
 
+def app():
+    inn = input("enter a number : ")
+    process = input("even or odd ? ")
 
+    if process == "even":
+        if int(inn)%2==0:
+            return 'even number.'
+        else:
+            return 'odd number.'
+    elif process == "odd":
+        if int(inn)%2==1:
+            return 'odd number.'
+        else:
+            return 'even number.'
+
+app()
 
 
