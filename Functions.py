@@ -96,4 +96,60 @@ def app():
 
 app()
 
+# validation of input
+
+def number_input_control():
+    inn = input("Enter a number")
+    while not inn.isdigit():
+        print("Sorry")
+        inn = input("Enter a number")
+    else:
+        print("congrast :)")
+
+number_input_control()
+
+
+def email_control():
+    inn =input("enter a email : ")
+
+    while not (('.' in inn) and ('@' in inn)):
+        print("You entered a unused email.")
+        inn = input("enter a email : ")
+    else:
+        print("Congrast.")
+
+
+email_control()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
